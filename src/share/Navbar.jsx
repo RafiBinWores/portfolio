@@ -25,7 +25,7 @@ function Navbar() {
             src="/favicon.png"
             alt="Avatar"
           />
-          <p className="text-[32px] hidden md:block font-semibold text-transparent bg-gradient-to-r from-primary-600 to-primary-300 bg-clip-text">
+          <p className="text-2xl lg:text-[32px] font-semibold text-transparent bg-gradient-to-r from-primary-600 to-primary-300 bg-clip-text">
             Kahafil Ora.
           </p>
         </a>
