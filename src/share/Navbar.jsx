@@ -2,14 +2,14 @@ import { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { CgMenuRight } from "react-icons/cg";
 import { RxCross2 } from "react-icons/rx";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [activeLink, setActiveLink] = useState(0);
   const [navToggle, setNavToggle] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#" },
+    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
     { name: "Contact", href: "#contact" },
@@ -19,16 +19,16 @@ function Navbar() {
     <header className="absolute top-0 lg:top-[35px] left-0 z-50 w-full">
       <nav className="flex items-center justify-between font-workSans h-[80px] lg:h-[100px] mx-auto lg:rounded-md bg-white/10 container px-[30px]">
         {/* Nav Logo */}
-        <a href="" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img
             className="size-12 lg:size-auto"
-            src="/favicon.png"
+            src="/logo.png"
             alt="Avatar"
           />
           <p className="text-2xl lg:text-[32px] font-semibold text-transparent bg-gradient-to-r from-primary-600 to-primary-300 bg-clip-text">
             Kahafil Ora.
           </p>
-        </a>
+        </Link>
 
         {/* Nav Links */}
         <div className="hidden gap-12 text-xl font-medium text-white lg:flex">
@@ -80,14 +80,14 @@ function Navbar() {
               <RxCross2 className="mb-8 text-3xl text-primary-700" />
             </button>
             {navLinks.map((link, index) => (
-              <NavLink
+              <a
                 key={index}
-                to="/"
+                href={link.href}
                 onClick={() => setNavToggle(false)}
                 className="font-bold text-primary-600"
               >
                 {link.name}
-              </NavLink>
+              </a>
             ))}
           </div>
         </div>
