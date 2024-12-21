@@ -5,6 +5,16 @@ import linkedin from '../assets/aboutIcon/linkedin.png';
 import behance from '../assets/aboutIcon/behance.png';
 import download from '../assets/aboutIcon/download.png';
 
+
+
+import softwareDevelopment from '../assets/service/softwareDevelopment.png';
+import computerNetworking from '../assets/service/computerNetworking.png';
+import cybersecurity from '../assets/service/cybersecurity.png';
+import dataBackup from '../assets/service/dataBackup.png';
+import ITConsulting from '../assets/service/ITConsulting.png';
+import seo from '../assets/service/seo.png';
+import socialMarketing from '../assets/service/socialMarketing.png';
+
 const heroData = [
     {
         id: 1,
@@ -31,6 +41,7 @@ const heroData = [
         ]
     },
 ]
+
 const about = [
     {
         id: 1,
@@ -68,4 +79,49 @@ const about = [
     }
 ]
 
-export {heroData, about};
+const services = [
+    {
+        id: 1,
+        image: cybersecurity,
+        name: "Cybersecurity.",
+        description: "Cybersecurity is the cornerstone of protecting digital assets, ensuring data confidentiality, integrity, and availability. It encompasses strategies to safeguard systems from evolving threats, fostering trust and resilience in the digital landscape.",
+    },
+    {
+        id: 2,
+        image: softwareDevelopment,
+        name: "Custom Software Development.",
+        description: "Custom software development involves designing, building, and deploying tailored solutions to meet specific business needs. It ensures scalability, efficiency, and seamless integration with existing systems for optimal performance.",
+    },
+    {
+        id: 3,
+        image: seo,
+        name: "Search Engine Optimization (SEO).",
+        description: "Captures the essence of leveraging content creation and media distribution to create powerful and memorable experiences that resonate with audiences. Here's how this concept unfol.  involves crafting compelling and relevant content in various formats:",
+    },
+    {
+        id: 4,
+        image: computerNetworking,
+        name: "Computer Networking.",
+        description: "Search Engine Optimization (SEO) enhances a website's visibility on search engines by optimizing content, structure, and technical elements. Effective SEO drives organic traffic, improves user engagement, and boosts overall online presence.",
+    },
+    {
+        id: 5,
+        image: dataBackup,
+        name: "Backup & Recovery Systems.",
+        description: "Backup and Recovery Systems ensure the protection and restoration of critical data in case of accidental loss, hardware failure, or cyberattacks. They provide businesses with continuity by securely storing data copies and enabling quick recovery to minimize downtime.",
+    },
+    {
+        id: 6,
+        image: ITConsulting,
+        name: "IT Consulting.",
+        description: "IT consulting helps businesses leverage technology to achieve their goals by providing expert advice, strategic planning, and tailored solutions. It bridges the gap between technical innovation and business needs, driving efficiency, growth, and competitive advantage.",
+    },
+    {
+        id: 7,
+        image: socialMarketing,
+        name: "Social Media Marketing.",
+        description: "Social Media Marketing leverages platforms like Facebook, Instagram, and LinkedIn to engage audiences, build brand awareness, and drive conversions. It combines strategy, content creation, and analytics to deliver targeted messages and measurable results.",
+    },
+]
+
+export {heroData, about, services};

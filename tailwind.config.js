@@ -12,17 +12,20 @@ export default {
       fontFamily: {
         workSans: ["Work Sans", "sans-serif"],
         anton: ["Anton", "sans-serif"],
+        urbanist: ["Urbanist", "serif"],
+        montserrat: ["Montserrat", "serif"],
       },
       colors: {
         primary: {
           100: "#F1F7F6",
           200: "#00DF82",
           300: "#08C79C",
-          400: "#737373",
+          400: "#E7FFFA",
           500: "#737373",
           600: "#04614C",
           700: "#042222",
         },
+        customGray: "#6F7C74", 
       },
       backgroundImage: {
         'button-gradient': 'linear-gradient(90deg, rgba(4,97,76,1) 0%, rgba(8,199,156,1) 100%)',

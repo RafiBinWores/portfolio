@@ -1,4 +1,5 @@
 import About from "../../components/about/About"
+import Expertise from "../../components/expertise/Expertise"
 import Hero from "../../components/hero/Hero"
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
     <>
       <Hero/>
       <About/>
+      <Expertise/>
     </>
   )
 }
