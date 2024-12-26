@@ -59,7 +59,7 @@ function Hero() {
             </div>
 
             {/* Hero Image */}
-            <div className="pb-20 md:basis-2/4 lg:basis-2/5 lg:pb-0">
+            <div className="pb-20 md:pb-10 md:basis-2/4 lg:basis-2/5 lg:pb-0">
               <div className="bg-gradient-to-t from-primary-300 p-0.5 rounded-lg">
                 <div className="rounded-md bg-primary-700">
                   <img
