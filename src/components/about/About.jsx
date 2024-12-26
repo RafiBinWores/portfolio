@@ -3,8 +3,8 @@ import { about } from "../../constants";
 
 function About() {
   return (
-    <div className="relative w-full overflow-hidden" id="about">
-      <div className="px-7 mx-auto container font-workSans pb-[100px] lg:pb-0 lg:pt-[125px] lg:h-[950px] bg-white relative overflow-hidden z-10">
+    <section className="relative w-full mt-10 overflow-hidden md:mt-0" id="about">
+      <div className="px-3 mx-auto container font-workSans pb-[100px] lg:pb-0 lg:pt-[125px] lg:h-[950px] bg-white relative overflow-hidden z-10">
         {about.map((about) => (
           <div key={about.id}>
             <div className="flex flex-col-reverse items-center gap-10 md:flex-row">
@@ -78,7 +78,7 @@ function About() {
 
       {/* Right Bottom color effect */}
       <div className="bg-primary-200 w-[665px] h-[468px] blur-[250px] rounded-full absolute -bottom-[200px] -right-[300px] lg:z-10"></div>
-    </div>
+    </section>
   );
 }
 

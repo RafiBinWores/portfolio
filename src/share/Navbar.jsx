@@ -12,12 +12,12 @@ function Navbar() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
+    { name: "Articles", href: "#articles" },
   ];
 
   return (
     <header className="absolute top-0 lg:top-[35px] left-0 z-50 w-full">
-      <nav className="flex items-center justify-between font-workSans h-[80px] lg:h-[100px] mx-auto lg:rounded-md bg-white/10 container px-[30px]">
+      <nav className="flex items-center justify-between font-workSans h-[80px] lg:h-[100px] mx-auto lg:rounded-md bg-white/10 container px-3">
         {/* Nav Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img

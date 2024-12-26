@@ -6,7 +6,6 @@ import behance from '../assets/aboutIcon/behance.png';
 import download from '../assets/aboutIcon/download.png';
 
 
-
 import softwareDevelopment from '../assets/service/softwareDevelopment.png';
 import computerNetworking from '../assets/service/computerNetworking.png';
 import cybersecurity from '../assets/service/cybersecurity.png';
@@ -124,4 +123,28 @@ const services = [
     },
 ]
 
-export {heroData, about, services};
+const articles = [
+    {
+        id: 1,
+        image: "https://images.unsplash.com/photo-1499678329028-101435549a4e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name: "The Evolution of Cyber Threats in the Digital Age",
+        description: "From Viruses to Ransomware: The Changing Landscape of Malware.",
+        created_at: "January 12, 2022"
+    },
+    {
+        id: 2,
+        image: "https://plus.unsplash.com/premium_photo-1676009547155-32d75ba9d089?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name: "AI and Machine Learning in Cybersecurity",
+        description: "Machine Learning Algorithms in Identifying Malware Patterns.",
+        created_at: "April 8, 2022"
+    },
+    {
+        id: 3,
+        image: "https://images.unsplash.com/photo-1475598322381-f1b499717dda?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        name: "Protecting Your Digital Identity in 2024",
+        description: "The Importance of Digital Hygiene in a Connected World.",
+        created_at: "March 15, 2022"
+    },
+]
+
+export {heroData, about, services, articles};

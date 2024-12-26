@@ -29,7 +29,10 @@ export default {
       },
       backgroundImage: {
         'button-gradient': 'linear-gradient(90deg, rgba(4,97,76,1) 0%, rgba(8,199,156,1) 100%)',
-      }
+      },
+      boxShadow: {
+        'custom-green': '0px 1px 10px rgba(8, 199, 156, 0.25)',
+      },
     },
   },
   plugins: [],
