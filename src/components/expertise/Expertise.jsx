@@ -83,7 +83,7 @@ function Expertise() {
               <h3 className="text-4xl font-anton text-primary-600">
                 {index < 9 ? `0${index + 1}` : index + 1}. {service.name}
               </h3>
-              <p className="font-medium font-montserrat text-customGray leading-[26px] text-justify pt-6">
+              <p className="font-medium font-montserrat text-customGray-100 leading-[26px] text-justify pt-6">
                 {service.description}
               </p>
             </div>

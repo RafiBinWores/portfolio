@@ -1,11 +1,3 @@
-import fb from '../assets/aboutIcon/fb.png';
-import instagram from '../assets/aboutIcon/instagram.png';
-import dribble from '../assets/aboutIcon/dribble.png';
-import linkedin from '../assets/aboutIcon/linkedin.png';
-import behance from '../assets/aboutIcon/behance.png';
-import download from '../assets/aboutIcon/download.png';
-
-
 import softwareDevelopment from '../assets/service/softwareDevelopment.png';
 import computerNetworking from '../assets/service/computerNetworking.png';
 import cybersecurity from '../assets/service/cybersecurity.png';
@@ -39,43 +31,6 @@ const heroData = [
             }
         ]
     },
-]
-
-const about = [
-    {
-        id: 1,
-        title: "Professional Innovator | Business Leader | Technology Advocate",
-        description: "A visionary leader with over a decade of experience in innovation and business growth. As Managing Director of Goinnovior Limited and Co-founder of 360D Soul Limited, Lifeinnovior, and Codeinnovior, integrates technology, business, and societal impact. From delivering ICT and InfoSec solutions to championing mental health and free technology education, is committed to driving excellence and empowering communities.",
-        image: "https://i.postimg.cc/TPSCTFXw/about.jpg",
-        downloadIcon: download,
-        socials:[
-            {
-                name: "Facebook",
-                icon: fb,
-                link: "https://www.facebook.com/",
-            },
-            {
-                name: "Instagram",
-                icon: instagram,
-                link: "https://www.instagram.com/",
-            },
-            {
-                name: "Dribble",
-                icon: dribble,
-                link: "https://www.dribble.com/",
-            },
-            {
-                name:"Linkedin",
-                icon: linkedin,
-                link: "https://www.linkedin.com/",
-            },
-            {
-                name: "Behance",
-                icon: behance,
-                link: "https://www.behance.com/",
-            },
-        ]
-    }
 ]
 
 const services = [
@@ -147,4 +102,32 @@ const articles = [
     },
 ]
 
-export {heroData, about, services, articles};
+const footerLinks = [
+    {
+        id: 1,
+        name: "Home",
+        link: "/"
+    },
+    {
+        id: 2,
+        name: "About",
+        link: "#about"
+    },
+    {
+        id: 3,
+        name: "Services",
+        link: "#services"
+    },
+    {
+        id: 4,
+        name: "Articles",
+        link: "#articles"
+    },
+    {
+        id: 5,
+        name: "Contact",
+        link: "#contact"
+    },
+]
+
+export {heroData, services, articles, footerLinks};

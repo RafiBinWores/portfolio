@@ -1,5 +1,6 @@
 import About from "../../components/about/About"
 import Articles from "../../components/articles/Articles"
+import Contact from "../../components/contact/Contact"
 import Expertise from "../../components/expertise/Expertise"
 import Hero from "../../components/hero/Hero"
 
@@ -10,6 +11,7 @@ function Home() {
       <About/>
       <Expertise/>
       <Articles/>
+      <Contact/>
     </>
   )
 }
