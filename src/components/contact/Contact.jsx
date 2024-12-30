@@ -2,17 +2,44 @@ import { LuSendHorizontal } from "react-icons/lu";
 import { GrLocation } from "react-icons/gr";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+
+import { toast, ToastContainer } from "react-toastify";
 
 function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
+  const [loading, setLoading] = useState(false);
+
   const onSubmit = (data) => {
-    console.log(data);
-    alert("Form submitted successfully!");
+    setLoading(true);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        data,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setLoading(false);
+          toast.success("Message sent successfully!");
+          reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Failed to send the message. Please try again.");
+          setLoading(false);
+        }
+      );
   };
 
   return (
@@ -349,16 +376,54 @@ function Contact() {
                   )}
                 </div>
               </div>
+
+              {/* Submit button */}
               <button
                 type="submit"
-                className="py-3 leading-[24px] px-5 text-white rounded-md bg-gradient-to-t from-primary-600 to-primary-300  mt-[50px] inline-flex items-center gap-3 font-workSans font-semibold duration-300 ease-in-out transform hover:scale-105"
+                className={`py-3 leading-[24px] px-5 text-white rounded-md bg-gradient-to-t from-primary-600 to-primary-300  mt-[50px] inline-flex items-center gap-3 font-workSans font-semibold duration-300 ease-in-out transform hover:scale-105 ${
+                  loading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-gradient-to-r from-primary-600 to-primary-300"
+                } text-white font-medium transition`}
+                disabled={loading}
               >
-                Submit <LuSendHorizontal className="text-2xl" />
+                {loading ? (
+                  <div className="flex items-center gap-2">
+                    <svg
+                      className="w-5 h-5 text-white animate-spin"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v8H4z"
+                      ></path>
+                    </svg>
+                    Sending...
+                  </div>
+                ) : (
+                  <>
+                    Submit <LuSendHorizontal className="text-2xl" />
+                  </>
+                )}
               </button>
             </form>
           </div>
         </div>
       </div>
+
+      {/* React-Toastify Container */}
+      <ToastContainer position="top-right" autoClose={5000} />
     </div>
   );
 }
