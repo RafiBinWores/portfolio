@@ -5,8 +5,8 @@ import { MdOutlineMailOutline } from "react-icons/md";
 function Contact() {
   return (
     <div className="relative bg-white h-[1050px] md:h-[570px]" id="contact">
-      <div className="container px-3 mx-auto h-[1250px] md:h-[770px] bg-white rounded-2xl shadow-custom-black absolute top-[65%] md:top-[80%] lg:top-[90%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <div className="flex flex-col md:flex-row p-3 gap-10 lg:p-[88px] lg:gap-[88px]">
+      <div className="container px-3 mx-auto bg-white rounded-2xl shadow-custom-black absolute top-[65%] md:top-[80%] lg:top-[90%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div className="flex flex-col md:flex-row p-3 gap-10 lg:p-[88px] pb-14 lg:gap-[88px]">
           <div className="lg:basis-5/12 basis-[45%]">
             <h3 className="text-[32px] uppercase font-anton text-transparent bg-gradient-to-r from-primary-600 to-primary-300 bg-clip-text">
               Let’s discuss
