@@ -1,8 +1,20 @@
 import { LuSendHorizontal } from "react-icons/lu";
 import { GrLocation } from "react-icons/gr";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { useForm } from "react-hook-form";
 
 function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    alert("Form submitted successfully!");
+  };
+
   return (
     <div className="relative bg-white h-[1050px] md:h-[570px]" id="contact">
       <div className="container px-3 mx-auto bg-white rounded-2xl shadow-custom-black absolute top-[65%] md:top-[80%] lg:top-[90%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -212,47 +224,135 @@ function Contact() {
               There are many variations of passages of Lorem Ipsu available, but
               the majority have suffered alte.
             </p>
-            <form className="mt-[50px]">
+            <form className="mt-[50px]" onSubmit={handleSubmit(onSubmit)}>
               <div className="flex flex-col gap-6">
-                <input
-                  type="text"
-                  placeholder="Name*"
-                  className="pb-3 border-b-2 border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
-                />
-                <input
-                  type="email"
-                  placeholder="Email*"
-                  className="pb-3 border-b-2 border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
-                />
-                <input
-                  type="text"
-                  placeholder="Location"
-                  className="pb-3 border-b-2 border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
-                />
+                {/* Name */}
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Name*"
+                    {...register("name", {
+                      required: "The name field is required",
+                    })}
+                    className={`pb-3 border-b-2 w-full border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] ${
+                      errors.name
+                        ? "border-red-500 placeholder:text-red-400"
+                        : "focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
+                    }`}
+                  />
+                  {errors.name && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.name.message}
+                    </p>
+                  )}
+                </div>
+                {/* Email */}
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email*"
+                    {...register("email", {
+                      required: "The email field is required",
+                      pattern: {
+                        value: /\S+@\S+\.\S+/,
+                        message: "Invalid email format",
+                      },
+                    })}
+                    className={`pb-3 border-b-2 w-full border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] ${
+                      errors.email
+                        ? "border-red-500 placeholder:text-red-400"
+                        : "focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
+                    }`}
+                  />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.email.message}
+                    </p>
+                  )}
+                </div>
+
+                {/* Location */}
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Location"
+                    {...register("location")}
+                    className="pb-3 border-b-2 w-full border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
+                  />
+                </div>
+
+                {/* Budget and Subject */}
                 <div className="flex items-center justify-between gap-6">
+                  {/* Budget */}
                   <div className="basis-2/5">
                     <input
                       type="number"
                       placeholder="Budget*"
                       min={1}
-                      className="pb-3 w-full border-b-2 border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
+                      {...register("budget", {
+                        required: "The budget field is required",
+                        valueAsNumber: true,
+                      })}
+                      className={`pb-3 w-full border-b-2 border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] ${
+                        errors.budget
+                          ? "border-red-500 placeholder:text-red-400"
+                          : "focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
+                      }`}
                     />
+                    {errors.budget && (
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.budget.message}
+                      </p>
+                    )}
                   </div>
+
+                  {/* Subject */}
                   <div className="basis-3/5">
                     <input
                       type="text"
                       placeholder="Subject*"
-                      className="pb-3 w-full border-b-2 border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
+                      {...register("subject", {
+                        required: "The subject field is required",
+                      })}
+                      className={`pb-3 w-full border-b-2 border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] ${
+                        errors.subject
+                          ? "border-red-500 placeholder:text-red-400"
+                          : "focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
+                      }`}
                     />
+                    {errors.subject && (
+                      <p className="mt-1 text-sm text-red-500">
+                        {errors.subject.message}
+                      </p>
+                    )}
                   </div>
                 </div>
-                <input
-                  type="text"
-                  placeholder="Message*"
-                  className="pb-3 border-b-2 border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
-                />
+
+                {/* Message */}
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Message*"
+                    {...register("message", {
+                      required: "The message field is required",
+                    })}
+                    className={`pb-3 border-b-2 w-full border-customGray-300 focus:outline-none placeholder:text-lg placeholder:font-workSans placeholder:leading-[24px] ${
+                      errors.message
+                        ? "border-red-500 placeholder:text-red-400"
+                        : "focus:border-primary-600 focus:placeholder:text-primary-300 placeholder:text-customGray-200"
+                    }`}
+                  />
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.message.message}
+                    </p>
+                  )}
+                </div>
               </div>
-              <button className="py-3 leading-[24px] px-5 text-white rounded-md bg-gradient-to-t from-primary-600 to-primary-300  mt-[50px] inline-flex items-center gap-3 font-workSans font-semibold duration-300 ease-in-out transform hover:scale-105">
+              <button
+                type="submit"
+                className="py-3 leading-[24px] px-5 text-white rounded-md bg-gradient-to-t from-primary-600 to-primary-300  mt-[50px] inline-flex items-center gap-3 font-workSans font-semibold duration-300 ease-in-out transform hover:scale-105"
+              >
                 Submit <LuSendHorizontal className="text-2xl" />
               </button>
             </form>
