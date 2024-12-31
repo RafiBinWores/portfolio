@@ -48,8 +48,8 @@ function Navbar() {
 
         {/* Nav Button */}
         <a
-          href=""
-          className="lg:flex hidden items-center gap-3 text-xl font-medium text-white bg-gradient-to-r from-primary-600 to-primary-300 rounded-md py-2.5 px-5 transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-primary-300 hover:to-primary-600"
+          href="#contact"
+          className="lg:flex hidden items-center gap-3 text-xl font-medium text-white bg-gradient-to-r from-primary-600 to-primary-300 rounded-md py-2.5 px-5 transition-all duration-300 ease-in-out transform hover:scale-105"
         >
           Contact
           <FiArrowUpRight />

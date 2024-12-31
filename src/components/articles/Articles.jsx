@@ -57,7 +57,7 @@ function Articles() {
 
                 <Link
                   to=""
-                  className="inline-flex items-center gap-3 px-3 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out transform rounded-md lg:font-medium lg:px-5 lg:py-3 lg:text-xl bg-gradient-to-r from-primary-600 to-primary-300 hover:scale-105 hover:bg-gradient-to-r hover:from-primary-300 hover:to-primary-600 font-workSans text-[15px]"
+                  className="inline-flex items-center gap-3 px-3 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out transform rounded-md lg:font-medium lg:px-5 lg:py-3 lg:text-xl bg-gradient-to-r from-primary-600 to-primary-300 hover:scale-105 font-workSans text-[15px]"
                 >
                   Read More
                   <FiArrowUpRight />

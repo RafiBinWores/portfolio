@@ -24,8 +24,8 @@ function Hero() {
 
               {/* Hero Button */}
               <a
-                href=""
-                className="inline-flex items-center gap-3 px-3 py-2 mt-6 text-base text-white transition-all duration-300 ease-in-out transform rounded-md lg:font-medium lg:px-5 lg:py-3 lg:text-xl bg-gradient-to-r from-primary-600 to-primary-300 hover:scale-105 hover:bg-gradient-to-r hover:from-primary-300 hover:to-primary-600"
+                href="#contact"
+                className="inline-flex items-center gap-3 px-3 py-2 mt-6 text-base text-white transition-all duration-300 ease-in-out transform rounded-md lg:font-medium lg:px-5 lg:py-3 lg:text-xl bg-gradient-to-r from-primary-600 to-primary-300 hover:scale-105"
               >
                 Let&apos;s Talk
                 <FiArrowUpRight />

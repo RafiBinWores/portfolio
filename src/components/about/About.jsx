@@ -171,7 +171,7 @@ function About() {
                 <div className="flex flex-col gap-4 lg:flex-row">
                   <a
                     href=""
-                    className="inline-flex items-center justify-center gap-3 px-6 py-3 text-lg font-medium text-center text-white transition-all duration-300 ease-in-out transform rounded-md lg:text-xl bg-gradient-to-r from-primary-600 to-primary-300 hover:scale-105 hover:bg-gradient-to-r hover:from-primary-300 hover:to-primary-600"
+                    className="inline-flex items-center justify-center gap-3 px-6 py-3 text-lg font-medium text-center text-white transition-all duration-300 ease-in-out transform rounded-md lg:text-xl bg-gradient-to-r from-primary-600 to-primary-300 hover:scale-105"
                   >
                     My Project
                     <FiArrowUpRight />
