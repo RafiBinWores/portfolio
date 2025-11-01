@@ -1,0 +1,59 @@
+import { twMerge } from "tailwind-merge";
+import React from "react";
+
+export function OrbitingCircles({
+  className,
+  children,
+  reverse,
+  duration = 20,
+  radius = 160,
+  path = true,
+  iconSize = 30,
+  speed = 1,
+  ...props
+}) {
+  const calculatedDuration = duration / speed;
+  return (
+    <>
+      {path && (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          className="absolute inset-0 pointer-events-none size-full"
+        >
+          <circle
+            className="stroke-1 stroke-white/10"
+            cx="50%"
+            cy="50%"
+            r={radius}
+            fill="none"
+          />
+        </svg>
+      )}
+      {React.Children.map(children, (child, index) => {
+        const angle = (360 / React.Children.count(children)) * index;
+        return (
+          <div className="absolute -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+            <div
+              style={{
+                "--duration": `${calculatedDuration}s`, // or use calc(*1s) in config
+                "--radius": radius,
+                "--angle": angle,
+                "--icon-size": `${iconSize}px`,
+              }}
+              className={twMerge(
+                `origin-center flex size-[var(--icon-size)] transform-gpu animate-orbit items-center justify-center rounded-full ${
+                  reverse ? "[animation-direction:reverse]" : ""
+                }`,
+                className
+              )}
+              {...props}
+            >
+              {child}
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+}

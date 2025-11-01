@@ -13,6 +13,15 @@
   color-scheme: dark;
 }
 
+@layer utilities {
+  /* Default fallbacks; you can override inline per element */
+  .orbit-vars {
+    --angle: 0;       /* degrees */
+    --radius: 80;     /* px */
+    --duration: 6s;   /* seconds (include unit here if you like) */
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

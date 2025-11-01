@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { ComputersCanvas } from "../components/canvas";
 
 function Hero() {
   return (
@@ -23,7 +23,7 @@ function Hero() {
 
       <ComputersCanvas/>
 
-      <div className="absolute flex items-center justify-center w-full bottom-32">
+      <div className="absolute flex items-center justify-center w-full bottom-24">
         <a href="#about">
           <div className="w-[35px] h-[64px] border-4 border-secondary rounded-3xl flex items-center justify-center p-2">
             <motion.div 
