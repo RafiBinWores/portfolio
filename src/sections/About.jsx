@@ -44,11 +44,6 @@ const About = () => {
             <div className="w-full">
               <Frameworks />
             </div>
-            {/* <img
-              src="assets/grid2.png"
-              alt="grid-2"
-              className="w-full sm:h-[276px] h-fit object-contain"
-            /> */}
             <div>
               <p className="mb-2 text-lg font-semibold">Tech Stack</p>
               <p className="text-sm">
