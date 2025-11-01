@@ -23,7 +23,7 @@ function Hero() {
 
       <ComputersCanvas/>
 
-      <div className="absolute flex items-center justify-center w-full bottom-24">
+      <div className="absolute flex items-center justify-center w-full bottom-32">
         <a href="#about">
           <div className="w-[35px] h-[64px] border-4 border-secondary rounded-3xl flex items-center justify-center p-2">
             <motion.div 
